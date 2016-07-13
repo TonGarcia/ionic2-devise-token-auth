@@ -1,6 +1,6 @@
 {
   "name": "ionic2-devise-token-auth",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "test": "tsc && karma start",
@@ -27,15 +27,19 @@
   },
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@angular/core": "2.0.0-rc.3",
     "codelyzer": "^0.0.20",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.1",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-mocha-reporter": "^2.0.4",
     "rxjs": "5.0.0-beta.6",
     "tslint": "^3.6.0",
     "typescript": "^1.8.10",
-    "typings":"^1.0.4",
+    "typings": "^1.0.4",
     "zone.js": "0.6.12"
   },
   "engines": {

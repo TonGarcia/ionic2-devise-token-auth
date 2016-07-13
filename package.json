@@ -27,7 +27,9 @@
   },
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
-  "dependencies": {},
+  "dependencies": {
+    "typings": "typings"
+  },
   "devDependencies": {
     "@angular/core": "2.0.0-rc.3",
     "codelyzer": "^0.0.20",

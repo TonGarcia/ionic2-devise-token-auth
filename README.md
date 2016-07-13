@@ -7,11 +7,22 @@
 
 ## Installation
 
-To install this library, run:
+Before install it lib you must install those dependencies:
 
-```bash
-  $ npm install ionic2-devise-token-auth --save
-```
+1. Install NPM & Node by brew or by apt-get
+2. Install globally ionic2:
+    ```
+        $ npm install -g ionic@beta
+    ```
+3. Install globally the Typings to run TypeScript
+    ```
+        $ npm install typings -g
+    ```
+
+To install this library, run:
+  ```
+    $ npm install ionic2-devise-token-auth --save
+  ```
 
 ## Development
 

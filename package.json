@@ -1,6 +1,6 @@
 {
   "name": "ionic2-devise-token-auth",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "test": "tsc && karma start",

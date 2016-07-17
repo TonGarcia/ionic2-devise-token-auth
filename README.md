@@ -16,7 +16,7 @@ Before install it lib you must install those dependencies:
     ```
 3. Install globally the Typings to run TypeScript
     ```
-        $ npm install typings -g
+        $ npm install -g typings
     ```
 
 To install this library, run:
@@ -31,13 +31,25 @@ It framework is based on the Angular2-Devise-Token which wasn't working with Ion
 To generate all `*.js`, `*.js.map` and `*.d.ts` files:
 
 ```bash
-$ npm run tsc
+    $ npm run tsc
 ```
 
 To lint all `*.ts` files:
 
 ```bash
-$ npm run lint
+    $ npm run lint
+```
+
+To publish a new release, first increase it version
+
+```bash
+    $ npm version <new_version>
+```
+
+Second publish it
+
+```bash
+    $ npm publish
 ```
 
 ## License

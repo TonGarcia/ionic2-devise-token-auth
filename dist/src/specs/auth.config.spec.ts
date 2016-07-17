@@ -3,7 +3,7 @@ import {
   expect,
   it,
 } from '@angular/core/testing';
-import {AuthConfig} from "./auth.config";
+import {AuthConfig} from "./../auth.config.ts";
 
 describe('AuthConfig', ()=> {
   'use strict';

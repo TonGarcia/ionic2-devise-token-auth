@@ -8,7 +8,7 @@ import {
 import {Http, BaseRequestOptions} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 import {provide} from '@angular/core';
-import {AuthHttp} from "./auth.http";
+import {AuthHttp} from "./../auth.http.ts";
 
 describe('AuthHttp', ()=> {
   beforeEachProviders(() => {

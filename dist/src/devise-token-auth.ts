@@ -1,11 +1,11 @@
 import {provide, Provider} from '@angular/core';
 import {HTTP_PROVIDERS, Http} from '@angular/http';
-import {AuthHttp} from './auth.http';
-import {AuthService} from './auth.service';
+import {AuthHttp} from './auth.http.ts';
+import {AuthService} from './auth.service.ts';
 
-export * from './auth.config';
-export * from './auth.http';
-export * from './auth.service';
+export * from './auth.config.ts';
+export * from './auth.http.ts';
+export * from './auth.service.ts';
 export * from './session.controller';
 
 /**

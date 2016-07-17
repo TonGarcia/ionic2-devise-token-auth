@@ -1,5 +1,5 @@
 import {Headers} from '@angular/http';
-import {AuthConfig} from './auth.config'
+import {AuthConfig} from './auth.config.ts'
 
 export class SessionController {
   static config:AuthConfig = new AuthConfig({
@@ -14,11 +14,22 @@ export class SessionController {
   }
 
   static getUserUid() {
-    return localStorage.getItem(this.config.uid);
+    return localStorage.getItem('Uid');
   }
-  
+
   static setUser(headers:Headers) {
-    this.config.authHeaders.forEach(header => localStorage.setItem(header, headers.get(header)));
+    localStorage.clear();
+    var authHeaders = [];
+
+    headers['_headersMap'].forEach(function(value, key) {
+      var config = {};
+      config[key] = value;
+      authHeaders[key] = key;
+      SessionController.config.globalHeaders.push(config);
+      localStorage.setItem(key, value);
+    });
+
+    this.config.authHeaders = authHeaders;
   }
 
   static removeUser() {
@@ -27,14 +38,13 @@ export class SessionController {
 
   static renewAccess(headers:Headers) {
     [
-      this.config.accessToken,
-      this.config.client,
+      this.config['Access-Token'],
+      this.config['Client'],
     ].forEach(header => localStorage.setItem(header, headers.get(header)));
   }
 
   static getAuthHeaders(): any[] {
     let headers = [];
-
     this.config.authHeaders.forEach(header => headers[header] = localStorage.getItem(header));
 
     return headers;

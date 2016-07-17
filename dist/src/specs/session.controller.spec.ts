@@ -5,7 +5,7 @@ import {
   beforeEach
 } from '@angular/core/testing';
 import { Headers } from '@angular/http';
-import { SessionController } from "./session.controller";
+import { SessionController } from "./../session.controller.ts";
 
 describe('SessionController', () => {
   'use strict';

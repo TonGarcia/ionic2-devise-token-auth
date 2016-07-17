@@ -1,6 +1,6 @@
 {
   "name": "ionic2-devise-token-auth",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "typings": "typings",
     "test": "karma start",

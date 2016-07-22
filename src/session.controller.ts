@@ -10,6 +10,18 @@ export class SessionController {
   }
 
   static userSignedIn():boolean {
+    if(localStorage.getItem('Access-Token')) {
+      var authHeaders:string[] = [];
+      for(var attr in localStorage) {
+        var header = {}
+        authHeaders[attr] = attr;
+        header[attr] = localStorage[attr];
+        SessionController.config.globalHeaders.push(header);
+      }
+
+      this.config.authHeaders = authHeaders;
+    }
+
     return this.getUserUid() !== null;
   }
 
@@ -18,8 +30,7 @@ export class SessionController {
   }
 
   static setUser(headers:Headers) {
-    localStorage.clear();
-    var authHeaders = [];
+    var authHeaders:string[] = [];
 
     headers['_headersMap'].forEach(function(value, key) {
       var config = {};

@@ -1,6 +1,6 @@
 import {provide, Provider} from '@angular/core';
 import {HTTP_PROVIDERS, Http} from '@angular/http';
-import {AuthHttp} from './auth.http.ts';
+import { AuthHttp } from './auth.http.ts';
 import {AuthService} from './auth.service.ts';
 
 export * from './auth.config.ts';
@@ -17,7 +17,7 @@ export * from './session.controller';
  */
 export const authService = (url: string): Provider => {
   return provide(AuthService, {
-    useFactory: (http) => {
+    useFactory: (http: AuthHttp) => {
       return new AuthService(http, url);
     },
     deps: [AuthHttp]
@@ -32,7 +32,7 @@ export const authService = (url: string): Provider => {
 export const AUTH_PROVIDERS:any[] = [
   HTTP_PROVIDERS,
   provide(AuthHttp, {
-    useFactory: (http) => {
+    useFactory: (http: Http) => {
       return new AuthHttp(http);
     },
     deps: [Http]

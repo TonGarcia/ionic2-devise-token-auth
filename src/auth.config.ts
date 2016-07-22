@@ -15,11 +15,11 @@ export class AuthConfig {
     this.uid = config.uid || 'uid';
     this.globalHeaders = config.globalHeaders || [];
     this.authHeaders = [
-      this['Token-Type'],
-      this['Access-Token'],
-      this['Client'],
-      this['Expiry'],
-      this['Uid']
+      'Token-Type',
+      'Access-Token',
+      'Client',
+      'Expiry',
+      'Uid'
     ];
   }
 }

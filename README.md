@@ -4,6 +4,9 @@
 [![npm version](https://img.shields.io/npm/v/ionic2-devise-token-auth.svg)](https://www.npmjs.com/package/ionic2-devise-token-auth)
 [![license](https://img.shields.io/npm/l/angular2-jwt.svg)](https://www.npmjs.com/package/angular2-jwt)
 
+## Documentation
+
+[How does it work? Read our DocFile.md](https://github.com/TonGarcia/ionic2-devise-token-auth/blob/master/DocFile.md)
 
 ## Installation
 
